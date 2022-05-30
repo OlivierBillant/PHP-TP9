@@ -28,16 +28,18 @@ if (file_exists('test.xml')) {
         // Requete de mise à jour
         $sql = "UPDATE  article SET prix = ? WHERE id = ?";
         $stmt = $db->prepare($sql);
-        $stmt->bindValue(1,50);
+        $stmt->bindValue(1,100);
         $stmt->bindValue(2,3);
         $stmt->execute();
 
+        //Ici on a relegue le selectAll et donc l affichage a la page home.
+        header("Location:home.php");
         
         //Requete de selectAll
-        $sql = "SELECT * FROM article";
-        $stmt = $db->query($sql);
-        $arr = $stmt->fetchAll(PDO::FETCH_ASSOC); // tableau
-        var_dump($arr);
+        // $sql = "SELECT * FROM article";
+        // $stmt = $db->query($sql);
+        // $arr = $stmt->fetchAll(PDO::FETCH_ASSOC); // tableau
+        // var_dump($arr);
 
         // Requete de selecBy
         // $sql = "SELECT * FROM article WHERE id = ? ";
