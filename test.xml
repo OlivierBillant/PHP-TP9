@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pdo>
+    <host>localhost</host>
+    <username>root</username>
+    <password></password>
+    <dbname>db_php</dbname>
+</pdo>
